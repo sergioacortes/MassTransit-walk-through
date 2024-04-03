@@ -1,2 +1,2 @@
 # MassTransit-walk-through
-NServiceBus walk through, sample projects
+MassTransit walk through, sample projects
