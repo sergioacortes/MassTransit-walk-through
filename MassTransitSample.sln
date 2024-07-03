@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransitSample.Orders", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransitSample.Billing", "src\MassTransitSample.Billing\MassTransitSample.Billing.csproj", "{9ABCD04B-D283-4D89-A4A6-4C9771D43EF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransitSample.Extensions", "src\MassTransitSample.Extensions\MassTransitSample.Extensions.csproj", "{F709E71D-2715-45C2-B1E2-93A2A9D55910}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,7 @@ Global
 		{302D2DC6-6E5D-4636-9E89-3F00AD98BAA3} = {1A8C4C7E-E54B-45DD-BE53-2BF8F73B12CB}
 		{03F21771-B357-40A2-BE68-68D94C248187} = {1A8C4C7E-E54B-45DD-BE53-2BF8F73B12CB}
 		{9ABCD04B-D283-4D89-A4A6-4C9771D43EF0} = {1A8C4C7E-E54B-45DD-BE53-2BF8F73B12CB}
+		{F709E71D-2715-45C2-B1E2-93A2A9D55910} = {1A8C4C7E-E54B-45DD-BE53-2BF8F73B12CB}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3C5332AC-693B-4037-BAFE-58755DB8AE12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -46,5 +49,9 @@ Global
 		{9ABCD04B-D283-4D89-A4A6-4C9771D43EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ABCD04B-D283-4D89-A4A6-4C9771D43EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ABCD04B-D283-4D89-A4A6-4C9771D43EF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F709E71D-2715-45C2-B1E2-93A2A9D55910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F709E71D-2715-45C2-B1E2-93A2A9D55910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F709E71D-2715-45C2-B1E2-93A2A9D55910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F709E71D-2715-45C2-B1E2-93A2A9D55910}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
