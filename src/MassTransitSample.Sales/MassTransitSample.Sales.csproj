@@ -4,4 +4,9 @@
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MassTransitSample.Contracts\MassTransitSample.Contracts.csproj" />
+      <ProjectReference Include="..\MassTransitSample.Extensions\MassTransitSample.Extensions.csproj" />
+    </ItemGroup>
+
 </Project>
