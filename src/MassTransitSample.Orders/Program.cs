@@ -1,8 +1,9 @@
 ﻿using MassTransit;
 using MassTransitSample.Extensions;
-using MassTransitSample.Orders.BackgroundServices;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
 
 builder.Services.AddMassTransitConfiguration(builder.Configuration,
     (busRegistrationConfigurator) =>
@@ -13,9 +14,9 @@ builder.Services.AddMassTransitConfiguration(builder.Configuration,
     {
     });
 
-builder.Services
-    .AddHostedService<OrdersBackgroundService>();
+var app = builder.Build();
 
-var host = builder.Build();
+app.MapControllers();
+app.UseRouting();
 
-await host.RunAsync();
+await app.RunAsync();
