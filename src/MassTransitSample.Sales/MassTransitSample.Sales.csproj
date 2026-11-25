@@ -3,6 +3,7 @@
     <ItemGroup>
       <ProjectReference Include="..\MassTransitSample.Contracts\MassTransitSample.Contracts.csproj" />
       <ProjectReference Include="..\MassTransitSample.Extensions\MassTransitSample.Extensions.csproj" />
+      <ProjectReference Include="..\MassTransitSample.Telemetry\MassTransitSample.Telemetry.csproj" />
     </ItemGroup>
 
 </Project>

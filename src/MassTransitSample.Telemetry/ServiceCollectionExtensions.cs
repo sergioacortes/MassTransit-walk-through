@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using MassTransit.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -22,6 +23,7 @@ public static class ServiceCollectionExtensions
             .AddTracing(options, builder =>
             {
                 builder.AddAspNetCoreInstrumentation();
+                builder.AddSource(DiagnosticHeaders.DefaultListenerName);
             });
     }
     

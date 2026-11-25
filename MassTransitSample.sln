@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".misc", ".misc", "{B8651DAC
 		.gitignore = .gitignore
 		README.md = README.md
 		GitVersion.yml = GitVersion.yml
+		docker-compose.yaml = docker-compose.yaml
+		.env = .env
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransitSample.Orders", "src\MassTransitSample.Orders\MassTransitSample.Orders.csproj", "{03F21771-B357-40A2-BE68-68D94C248187}"
