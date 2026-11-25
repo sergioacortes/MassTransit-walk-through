@@ -21,6 +21,7 @@ services:
     container_name: rabbitmq
     image: rabbitmq:3.13.7-management
     profiles: 
+      - "infrastructure"
       - "infrastructure-messaging"
     command: rabbitmq-server
     restart: always
@@ -126,6 +127,7 @@ services:
     container_name: otel-collector
     image: otel/opentelemetry-collector-contrib:0.137.0
     profiles: 
+      - "infrastructure"
       - "infrastructure-monitoring"
     command: [ "--config=/etc/otel-collector-config.yaml" ]
     restart: no
@@ -153,27 +155,11 @@ services:
     networks:
       - localnet
 
-  tempo:
-    container_name: tempo
-    image: grafana/tempo:2.8.2
-    profiles: 
-      - "infrastructure-monitoring"
-    command: ["-config.file=/etc/tempo.yaml"]
-    restart: no
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - ./containers/monitoring/tempo/tempo.yaml:/etc/tempo.yaml
-    ports:
-      - 3200:3200  # tempo
-      - 4007:4317  # otlp grpc
-      - 4008:4318  # otlp http
-    networks:
-      - localnet
-
   grafana:
     container_name: grafana
     image: grafana/grafana:12.2.0
     profiles: 
+      - "infrastructure"
       - "infrastructure-monitoring"
     restart: no
     environment:
@@ -189,10 +175,29 @@ services:
     networks:
       - localnet
 
+  tempo:
+    container_name: tempo
+    image: grafana/tempo:2.8.2
+    profiles: 
+      - "infrastructure"
+      - "infrastructure-monitoring"
+    command: ["-config.file=/etc/tempo.yaml"]
+    restart: no
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./containers/monitoring/tempo/tempo.yaml:/etc/tempo.yaml
+    ports:
+      - 3200:3200  # tempo
+      - 4007:4317  # otlp grpc
+      - 4008:4318  # otlp http
+    networks:
+      - localnet
+
   loki:
     container_name: loki
     image: grafana/loki:3.5.5
     profiles: 
+      - "infrastructure"
       - "infrastructure-monitoring"
     command: -config.file=/etc/loki/local-config.yaml
     restart: no
