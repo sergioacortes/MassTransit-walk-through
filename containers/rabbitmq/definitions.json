@@ -1,0 +1,98 @@
+{
+	"rabbit_version": "3.13.7",
+	"rabbitmq_version": "3.13.7",
+	"product_name": "RabbitMQ",
+	"product_version": "3.13.7",
+	"users": [
+		{
+			"name": "guest",
+			"password_hash": "rb8Y2tEcnM0We2xs7bk0M+/YtVxsFEUwoBp0DW4XNkW0om1E",
+			"hashing_algorithm": "rabbit_password_hashing_sha256",
+			"tags": [
+				"administrator"
+			],
+			"limits": {
+
+			}
+		},
+		{
+			"name": "app",
+			"password_hash": "qZrdc+LjZOZ7txwOyMkr9/PSNbecdjkEB4Tjml3Gvv6KThLF",
+			"hashing_algorithm": "rabbit_password_hashing_sha256",
+			"tags": [
+				"administrator"
+			],
+			"limits": {
+
+			}
+		}
+	],
+	"vhosts": [
+		{
+			"name": "/",
+			"description": "",
+			"tags": [
+
+			],
+			"metadata": {
+				"description": "",
+				"tags": [
+
+				]
+			}
+		}
+	],
+	"permissions": [
+		{
+			"user": "app",
+			"vhost": "/",
+			"configure": ".*",
+			"write": ".*",
+			"read": ".*"
+		},
+		{
+			"user": "guest",
+			"vhost": "/",
+			"configure": ".*",
+			"write": ".*",
+			"read": ".*"
+		}
+	],
+	"topic_permissions": [
+		{
+			"user": "app",
+			"vhost": "/",
+			"exchange": "",
+			"write": ".*",
+			"read": ".*"
+		},
+		{
+			"user": "guest",
+			"vhost": "/",
+			"exchange": "",
+			"write": ".*",
+			"read": ".*"
+		}
+	],
+	"parameters": [
+
+	],
+	"global_parameters": [
+		{
+			"name": "internal_cluster_id",
+			"value": "rabbitmq-cluster-id-ifE38VNOcApHVJSqQgLkHg"
+		}
+	],
+	"policies": [
+
+	],
+	"queues": [
+
+	],
+	"exchanges": [
+
+	],
+	"bindings": [
+
+	]
+}
